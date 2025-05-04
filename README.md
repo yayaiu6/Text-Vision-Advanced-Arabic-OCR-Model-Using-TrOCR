@@ -93,3 +93,7 @@ To run or train the project from scratch, follow these instructions:
 - Modify the `base_path` in `preprocess.py` or `images_dir` in `train.py` if your directory structure differs.
 - The project assumes a Kaggle-like environment (`/kaggle/working/`); adjust paths for local use.
 
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
