@@ -9,7 +9,7 @@ def load_data(csv_file):
     base_path = '/kaggle/working/arabic_images'  # Base path for images
     data = pd.read_csv(csv_file)
     image_paths = data['image'].tolist()
-    full_image_paths = [os.path.join(base_path, path) for path in image_paths]  # Add base path to each image
+    full_image_paths = [os.path.join(base_path, path) for path in image_paths]  
     for path in full_image_paths:
         if not os.path.exists(path):
             print(f"File not found: {path}")
@@ -42,7 +42,7 @@ def main(csv_file, tokenizer_name):
 
 if __name__ == "__main__":
     csv_file = '/kaggle/working/arabic_images/annotations.csv'
-    tokenizer_name = 'aubmindlab/bert-base-arabertv02'  # Replace with the actual tokenizer path
+    tokenizer_name = 'aubmindlab/bert-base-arabertv02' 
 
     # Call the main function
     train_images, train_texts, val_images, val_texts, test_images, test_texts, tokenized_texts = main(csv_file, tokenizer_name)
